@@ -5,7 +5,8 @@ using UnityEngine.Pool;
 
 public class PoolManager : MonoBehaviour
 {
-    /* Esta implementación de PoolManager hace uso de la clase ObjectPool<> de Unity.
+    /* Esta implementación de PoolManager es muy simple de usar.
+     * Hace uso de la clase ObjectPool<> de Unity.
      * 
      * Ejemplo de uso del PoolManager:
      * 
@@ -42,7 +43,7 @@ public class PoolManager : MonoBehaviour
                      - Hacer "lock" en el Inspector para el Pool Data
                      - En la carpeta Project seleccionar el prefab: botón derecho, Properties
                      - Hacer drag&drop de LA componente específica del prefab (ej: MissileController) al elemento prefab de poolData
-           - Default Capacity: Tamaño inicial del pool
+           - Default Capacity: capacidad del ObjectPool<>
            - Max Size: máxima cantidad de objetos que tendrá el pool. 
                        Recordar que la clase ObjectPool<> de Unity sí permitirá crear en runtime más objetos que el valor de
                        maxSize, pero serán destruidos los que no quepan en el pool.

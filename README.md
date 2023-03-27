@@ -1,6 +1,6 @@
 # PoolManager
 Esta implementación de PoolManager es muy simple de usar.<br>
-Hace uso de la clase ObjectPool<> de Unity.
+Hace uso de la clase `ObjectPool<>` de Unity.
  
 Ejemplo de uso del PoolManager:
  
@@ -23,9 +23,9 @@ Ejemplo de uso del PoolManager:
     se cambia por:<br>
      PoolManager.Instance.Release(gameObject);
      
-NO ES NECESARIO REALIZAR NINGUNA CONFIGURACIÓN ADICIONAL PARA QUE EL POOL MANAGER EMPIECE A FUNCIONAR.
+**NO ES NECESARIO REALIZAR NINGUNA CONFIGURACIÓN ADICIONAL PARA QUE EL POOL MANAGER EMPIECE A FUNCIONAR.**
  
- Si se desea tener un control más detallado de cuántos objetos tendrá cada pool de cada prefab,
+ Sin embargo, si se desea tener un control más detallado de cuántos objetos tendrá cada pool de cada prefab,
  y si es que estos objetos se van a crear todos en el Start o se van a crear de a uno, se puede configurar 
  un nuevo elemento en el array poolData del objeto Pool Manager, haciendo uso del Scriptable Object PoolManagerData.
  

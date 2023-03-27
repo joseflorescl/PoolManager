@@ -31,7 +31,7 @@ public class PoolManager : MonoBehaviour
      *     
      * NO ES NECESARIO REALIZAR NINGUNA CONFIGURACIÓN ADICIONAL PARA QUE EL POOL MANAGER EMPIECE A FUNCIONAR.
      * 
-     * Si se desea tener un control más detallado de cuántos objetos tendrá cada pool de cada prefab,
+     * Sin embargo, si se desea tener un control más detallado de cuántos objetos tendrá cada pool de cada prefab,
      * y si es que estos objetos se van a crear todos en el Start o se van a crear de a uno, se puede configurar 
      * un nuevo elemento en el array poolData haciendo uso del Scriptable Object PoolManagerData.
      * Este es el detalle de cada campo a configurar:

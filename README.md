@@ -4,7 +4,7 @@ Hace uso de la clase `ObjectPool<>` de Unity.
  
 Ejemplo de uso del PoolManager:
  
- 1. Crear en la jerarquía un gameObject de nombre "Pool Manager" y agregarle como componente el script PoolManager.
+ 1. Crear en la jerarquía un gameObject de nombre "Pool Manager" y agregarle como componente el script `PoolManager`.
  
  2. En nuestro código, reemplazar las llamadas a `Instantiate` por el método `Get` del PoolManager, ej:<br>
       `EnemyController enemy = Instantiate(enemyPrefab, position, rotation);`<br>
@@ -26,12 +26,12 @@ Ejemplo de uso del PoolManager:
 **NO ES NECESARIO REALIZAR NINGUNA CONFIGURACIÓN ADICIONAL PARA QUE EL POOL MANAGER EMPIECE A FUNCIONAR.**
  
  Sin embargo, si se desea tener un control más detallado de cuántos objetos tendrá cada pool de cada prefab,
- y si es que estos objetos se van a crear todos en el Start o se van a crear de a uno, se puede configurar 
+ y si es que estos objetos se van a crear todos en el **Start** o se van a crear de a uno, se puede configurar 
  un nuevo elemento en el array `poolData` del objeto Pool Manager, haciendo uso del Scriptable Object `PoolManagerData`.
  
  Este es el detalle de cada campo a configurar:
  
-- **Name**: este campo no se debe setear a mano, ya que automáticamente se colocará el nombre del prefab, en el `OnValidate`
+- **Name**: este campo no se debe setear a mano, ya que automáticamente se colocará el nombre del prefab, en el método `OnValidate`
 - **Prefab**: se coloca la misma referencia usada en el `Instantiate`.<br>
               Tener el cuidado de que al hacer drag&drop del prefab desde la ventana Project hacia el Inspector
               no se debe hacer directamente desde el prefab sino que desde LA componente del prefab que se quiera elegir.<br>
@@ -44,12 +44,12 @@ Ejemplo de uso del PoolManager:
                 Recordar que la clase `ObjectPool<>` de Unity sí permitirá crear en runtime más objetos que el valor de
                 `maxSize`, pero serán destruidos los que no quepan en el pool.
 - **Create Pool Mode**: los valores posibles son:<br>
-	- **Start**: todos los objetos del pool se crearán en una corutina lanzada en el método `Start` de PoolManager.
+	- **Start**: todos los objetos del pool se instanciarán en una corutina lanzada en el método `Start` de PoolManager.
                Cada "x" elementos creados en el pool se descansará 1 frame para no bajar los fps.
-               El valor de x está dado por la variable `creationOnStartWaitFrameAfter`.
+               El valor de "x" está dado por la variable `creationOnStartWaitFrameAfter` de PoolManager.
 	- **First Get**: en este caso todos los objetos del pool se crearán cuando se haga el primer `Get`.
                    Notar que aquí no se hace uso de corutinas por lo que podría notarse una caída de los fps
-	- **Default**: en este caso se usará el valor booleano seteado en la var **Default Create Objects** del Pool Manager.
+	- **Default**: en este caso se usará el valor booleano seteado en la variable **Default Create Objects** del Pool Manager.
 - **Create Parent**: valor bool que en caso de activarse indica que se creará un game object padre para almacenar todos los objetos de cada pool.
                      En caso de querer usar UN mismo objeto padre para TODOS los pools, se puede usar la variable **Default Parent** de la clase PoolManager.
 					 

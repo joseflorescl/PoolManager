@@ -17,7 +17,7 @@ public class PoolManager : MonoBehaviour
      *   se cambia por:
      *     EnemyController enemy = PoolManager.Instance.Get(enemyPrefab, position, rotation);
      *     
-     *   En este caso la var enemyPrefab está declarada de tipo EnemyController. 
+     *   En este caso la variable enemyPrefab está declarada de tipo EnemyController. 
      *   Para usar este PoolManager solamente se necesita que el prefab sea de un tipo que herede de Component, 
          como cualquier script creado por nosotros que hereda de MonoBehaviour -> Behaviour -> Component
          Pero en el caso de querer usar este PoolManager con prefabs de tipo GameObject, también funciona,

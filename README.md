@@ -11,7 +11,7 @@ Ejemplo de uso del PoolManager:
     se cambia por:<br>
       `EnemyController enemy = PoolManager.Instance.Get(enemyPrefab, position, rotation);`<br>
      
-    En este caso la var `enemyPrefab` está declarada de tipo `EnemyController`.<br>
+    En este caso la variable `enemyPrefab` está declarada de tipo `EnemyController`.<br>
     Para usar este PoolManager solamente se necesita que el prefab sea de un tipo que herede de `Component`, 
     como cualquier script creado por nosotros que hereda de `MonoBehaviour` -> `Behaviour` -> `Component`.<br>
     Pero en el caso de querer usar este PoolManager con prefabs de tipo GameObject, también funciona,

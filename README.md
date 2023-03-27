@@ -1,15 +1,15 @@
 # PoolManager
-Esta implementación de PoolManager es muy simple de usar.
+Esta implementación de PoolManager es muy simple de usar.<br>
 Hace uso de la clase ObjectPool<> de Unity.
  
 Ejemplo de uso del PoolManager:
  
  1. Crear en la jerarquía un gameObject de nombre "Pool Manager" y agregarle como componente el script PoolManager.
  
- 2. En nuestro código, reemplazar las llamadas a Instantiate por el método Get del PoolManager, ej: 
-      EnemyController enemy = Instantiate(enemyPrefab, position, rotation);
-    se cambia por:
-      EnemyController enemy = PoolManager.Instance.Get(enemyPrefab, position, rotation);
+ 2. En nuestro código, reemplazar las llamadas a Instantiate por el método Get del PoolManager, ej:<br>
+      EnemyController enemy = Instantiate(enemyPrefab, position, rotation);<br>
+    se cambia por:<br>
+      EnemyController enemy = PoolManager.Instance.Get(enemyPrefab, position, rotation);<br>
      
     En este caso la var enemyPrefab está declarada de tipo EnemyController. 
     Para usar este PoolManager solamente se necesita que el prefab sea de un tipo que herede de Component, 

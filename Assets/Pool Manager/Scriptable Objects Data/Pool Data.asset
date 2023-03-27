@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4e064cf2e1123459572d3a77e24b43, type: 3}
+  m_Name: Pool Data
+  m_EditorClassIdentifier: 
+  poolData:
+  - name: Bullet
+    prefab: {fileID: 6213373363076452185, guid: 273e964263482b448971edc6b3fa776c, type: 3}
+    defaultCapacity: 3
+    maxSize: 20
+    createPoolMode: 2
+    createParent: 0

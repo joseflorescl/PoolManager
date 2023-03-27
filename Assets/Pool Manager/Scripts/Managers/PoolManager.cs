@@ -54,7 +54,7 @@ public class PoolManager : MonoBehaviour
                                First Get: en este caso todos los objetos del pool se crearán cuando se haga el primer Get.
                                           Notar que aquí no se hace uso de corutinas por lo que podría notarse una caída de los fps
                                Default: en este caso se usará el valor booleano seteado en la var "Default Create Objects" del Pool Manager.
-           - Create Parent: valor bool que en caso de activarse indica que se creará un game object para almacenar todos los objetos de cada pool.
+           - Create Parent: valor bool que en caso de activarse indica que se creará un game object padre para almacenar todos los objetos de cada pool.
                             En caso de querer usar UN mismo objeto padre para TODOS los pools, se puede usar la variable "Default Parent" de la clase Pool Manager.
                             
     */

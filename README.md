@@ -32,13 +32,13 @@ NO ES NECESARIO REALIZAR NINGUNA CONFIGURACIÓN ADICIONAL PARA QUE EL POOL MANAG
  Este es el detalle de cada campo a configurar:
  
 - Name: este campo no se debe setear a mano, ya que automáticamente se colocará el nombre del prefab, en el OnValidate
-- Prefab: se coloca la misma referencia usada en el Instantiate.
+- Prefab: se coloca la misma referencia usada en el Instantiate.<br>
               Tener el cuidado de que al hacer drag&drop del prefab desde la ventana Project hacia el Inspector
               no se debe hacer directamente desde el prefab sino que desde LA componente del prefab que se quiera elegir.
               Esto se hace así:
-              - Hacer "lock" en el Inspector para el Pool Data
-              - En la carpeta Project seleccionar el prefab: botón derecho, Properties
-              - Hacer drag&drop de LA componente específica del prefab (ej: MissileController) al elemento prefab de poolData
+	- Hacer "lock" en el Inspector para el Pool Data
+	- En la carpeta Project seleccionar el prefab: botón derecho, Properties
+	- Hacer drag&drop de LA componente específica del prefab (ej: MissileController) al elemento prefab de poolData
 - Default Capacity: capacidad del ObjectPool<>
 - Max Size: máxima cantidad de objetos que tendrá el pool. 
                 Recordar que la clase ObjectPool<> de Unity sí permitirá crear en runtime más objetos que el valor de

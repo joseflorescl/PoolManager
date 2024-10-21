@@ -1,5 +1,5 @@
 # PoolManager
-Esta implementación de PoolManager es muy simple de usar.<br>
+This implementation of PoolManager is very simple to use.<br>
 Hace uso de la clase `ObjectPool<>` de Unity.
  
 Ejemplo de uso del PoolManager:
